@@ -1,0 +1,13 @@
+package weapons;
+
+public class Quarterstaff extends WeaponTemplate{
+  public Quarterstaff() {
+    weaponName = "Quarterstaff";
+    weaponCategory = WeaponCategory.Melee;
+    damageType = DamageTypes.Bludgeoning;
+    damageDice = "1d6";
+    versatileDamageDice = "1d8";
+    properties = new String[] {"Versatile (1d8)"};
+    weaponRating = WeaponRating.Simple;
+  }
+}
