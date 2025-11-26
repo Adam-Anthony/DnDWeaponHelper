@@ -13,24 +13,30 @@ static void main(String[] args) {
       println "Random Martial Weapon Rolls"
       println "* Random Melee *"
       def w1 = weaponCrafter.getRandomMartialMeleeWeapon()
+      if (checkElementChance()) addRandomElement(w1)
       println w1
       println "** Random Ranged **"
       def w2 = weaponCrafter.getRandomMartialRangedWeapon()
+      if (checkElementChance()) addRandomElement(w2)
       println w2
       println "*** True Random ***"
       def w3 = weaponCrafter.getRandomMartialWeapon()
+      if (checkElementChance()) addRandomElement(w3)
       println w3
     }
     if (simple) {
       println "Random Simple Weapon Rolls"
       println "* Random Melee *"
       def w1 = weaponCrafter.getRandomSimpleMeleeWeapon()
+      if (checkElementChance()) addRandomElement(w1)
       println w1
       println "** Random Ranged **"
       def w2 = weaponCrafter.getRandomSimpleRangedWeapon()
+      if (checkElementChance()) addRandomElement(w2)
       println w2
       println "*** True Random ***"
       def w3 = weaponCrafter.getRandomSimpleWeapon()
+      if (checkElementChance()) addRandomElement(w3)
       println w3
     }
   } else {
