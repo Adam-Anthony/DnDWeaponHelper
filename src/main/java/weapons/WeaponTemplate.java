@@ -12,18 +12,10 @@ abstract class WeaponTemplate {
   protected String secondaryDamageDice = null;
   protected String[] properties = null;
   protected WeaponRating weaponRating = null;
+  protected DamageTypes chromaticType = null;
+  protected String colour = null;
 
 
-  String getWeaponName() { return weaponName;}
-  WeaponCategory getWeaponCategory() { return weaponCategory;}
-  String getDamageDice() { return damageDice; }
-  String getSecondaryDamageDice() { return secondaryDamageDice; }
-  String getVersatileDamageDice() { return versatileDamageDice; }
-  String[] getProperties() { return properties; }
-  String writeProperties() { return Arrays.toString(properties); }
-  WeaponRating getWeaponRating() { return weaponRating;}
-  DamageTypes getDamageType() { return damageType;}
-  DamageTypes getSecondaryDamageType() { return secondaryDamageType;}
   public String getWeaponName() { return weaponName;}
   public WeaponCategory getWeaponCategory() { return weaponCategory;}
   public String getDamageDice() { return damageDice; }
@@ -35,7 +27,9 @@ abstract class WeaponTemplate {
   public DamageTypes getDamageType() { return damageType;}
   public DamageTypes getSecondaryDamageType() { return secondaryDamageType;}
 
+  public void setChromaticType(DamageTypes chromaticType) { this.chromaticType = chromaticType; }
   public void setColour(String colour) { this.colour = colour; }
+  public DamageTypes getChromaticType() { return chromaticType; }
   public String getColour() { return colour; }
 
   @Override
@@ -45,8 +39,9 @@ abstract class WeaponTemplate {
       returnString += " (" + versatileDamageDice + ")";
     returnString += " ["+ damageType+"]";
     if (secondaryDamageDice != null)
-      returnString += ",  " + secondaryDamageDice+" ["+secondaryDamageType+"]";
       returnString += " + " + secondaryDamageDice+" ["+secondaryDamageType+"]";
+    if (chromaticType != null)
+      returnString += " + 1d4 ["+ chromaticType+"]";
     if (properties != null)
       returnString += "\n Properties: " + writeProperties();
     return  returnString;
