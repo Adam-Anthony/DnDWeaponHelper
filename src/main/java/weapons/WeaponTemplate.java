@@ -24,15 +24,29 @@ abstract class WeaponTemplate {
   WeaponRating getWeaponRating() { return weaponRating;}
   DamageTypes getDamageType() { return damageType;}
   DamageTypes getSecondaryDamageType() { return secondaryDamageType;}
+  public String getWeaponName() { return weaponName;}
+  public WeaponCategory getWeaponCategory() { return weaponCategory;}
+  public String getDamageDice() { return damageDice; }
+  public String getSecondaryDamageDice() { return secondaryDamageDice; }
+  public String getVersatileDamageDice() { return versatileDamageDice; }
+  public String[] getProperties() { return properties; }
+  public String writeProperties() { return Arrays.toString(properties); }
+  public WeaponRating getWeaponRating() { return weaponRating;}
+  public DamageTypes getDamageType() { return damageType;}
+  public DamageTypes getSecondaryDamageType() { return secondaryDamageType;}
+
+  public void setColour(String colour) { this.colour = colour; }
+  public String getColour() { return colour; }
 
   @Override
   public String toString() {
-    String returnString = "[" + weaponName + "] | Damage: " + damageDice;
+    String returnString = "[" + (colour!=null ? colour+" " : "")  + weaponName + "] | Damage: " + damageDice;
     if (versatileDamageDice != null)
       returnString += " (" + versatileDamageDice + ")";
     returnString += " ["+ damageType+"]";
     if (secondaryDamageDice != null)
       returnString += ",  " + secondaryDamageDice+" ["+secondaryDamageType+"]";
+      returnString += " + " + secondaryDamageDice+" ["+secondaryDamageType+"]";
     if (properties != null)
       returnString += "\n Properties: " + writeProperties();
     return  returnString;
