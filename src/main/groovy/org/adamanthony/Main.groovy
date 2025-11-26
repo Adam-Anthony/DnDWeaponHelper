@@ -76,6 +76,6 @@ static void addElement(int id, def weapon) {
     case 2: weapon.setChromaticType(DamageTypes.Fire); weapon.setColour("Red"); break
     case 3: weapon.setChromaticType(DamageTypes.Lightning); weapon.setColour("Blue"); break
     case 4: weapon.setChromaticType(DamageTypes.Poison); weapon.setColour("Green"); break
-    case 5: weapon.setChromaticType(DamageTypes.Necrotic); weapon.setColour("Purple"); break
+    case 5: weapon.setChromaticType(DamageTypes.Necrotic); weapon.setColour("???"); break
   }
 }
