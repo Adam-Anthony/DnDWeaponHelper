@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Whip extends WeaponTemplate{
   public Whip() {
-    weaponName = "Whip";
+    setWeaponType("Whip");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d4";

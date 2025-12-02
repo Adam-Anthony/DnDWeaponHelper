@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Longsword extends WeaponTemplate{
   public Longsword() {
-    weaponName = "Longsword";
+    setWeaponType("Longsword");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d8";

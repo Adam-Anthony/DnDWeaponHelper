@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class LightHammer extends WeaponTemplate{
   public LightHammer() {
-    weaponName = "Light Hammer";
+    setWeaponType("Light Hammer");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d4";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class WarPick extends WeaponTemplate{
   public WarPick() {
-    weaponName = "War Pick";
+    setWeaponType("War Pick");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d8";

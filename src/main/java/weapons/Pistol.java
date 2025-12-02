@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Pistol extends WeaponTemplate{
   public Pistol() {
-    weaponName = "Pistol";
+    setWeaponType("Pistol");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d10";

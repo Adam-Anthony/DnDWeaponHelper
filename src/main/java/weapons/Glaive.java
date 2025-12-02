@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Glaive extends WeaponTemplate{
   public Glaive() {
-    weaponName = "Glaive";
+    setWeaponType("Glaive");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d10";

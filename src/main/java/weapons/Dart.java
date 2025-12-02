@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Dart extends WeaponTemplate{
   public Dart() {
-    weaponName = "Dart";
+    setWeaponType("Dart");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d4";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Lance extends WeaponTemplate{
   public Lance() {
-    weaponName = "Lance";
+    setWeaponType("Lance");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d10";

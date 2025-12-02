@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Greatsword extends WeaponTemplate{
   public Greatsword() {
-    weaponName = "Greatsword";
+    setWeaponType("Greatsword");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "2d6";

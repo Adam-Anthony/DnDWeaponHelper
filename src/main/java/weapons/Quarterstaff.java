@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Quarterstaff extends WeaponTemplate{
   public Quarterstaff() {
-    weaponName = "Quarterstaff";
+    setWeaponType("Quarterstaff");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d6";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Greataxe extends WeaponTemplate{
   public Greataxe() {
-    weaponName = "Greataxe";
+    setWeaponType("Greataxe");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d12";

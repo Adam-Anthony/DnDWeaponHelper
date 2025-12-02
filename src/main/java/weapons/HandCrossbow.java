@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class HandCrossbow extends WeaponTemplate{
   public HandCrossbow() {
-    weaponName = "Hand Crossbow";
+    setWeaponType("Hand Crossbow");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d6";

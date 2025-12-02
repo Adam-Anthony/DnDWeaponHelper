@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Blowgun extends WeaponTemplate{
   public Blowgun() {
-    weaponName = "Blowgun";
+    setWeaponType("Blowgun");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1";

@@ -1,9 +1,11 @@
-package weapons;
+package weaponforger;
 
-public class Weapon {
+import weapons.*;
+
+public class WeaponForge {
   Object weapon  = null;
 
-  Weapon() {
+  public WeaponForge() {
   }
   Object getWeaponObject() {
     return weapon;
@@ -55,7 +57,7 @@ public class Weapon {
     return weapon;
   }
   public Object getRandomMartialRangedWeapon() {
-    getMartialWeapon((int)(Math.random() * 7) + 18);
+    getMartialWeapon((int)(Math.random() * 18) + 7);
     return weapon;
   }
   public Object getSpecificMartialWeaponById(int id) {

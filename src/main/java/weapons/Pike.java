@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Pike extends WeaponTemplate{
   public Pike() {
-    weaponName = "Pike";
+    setWeaponType("Pike");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d10";

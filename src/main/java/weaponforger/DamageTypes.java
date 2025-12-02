@@ -1,4 +1,4 @@
-package weapons;
+package weaponforger;
 
 public enum DamageTypes {
   Bludgeoning,

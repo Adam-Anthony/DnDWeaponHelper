@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class HeavyCrossbow extends WeaponTemplate{
   public HeavyCrossbow() {
-    weaponName = "Heavy Crossbow";
+    setWeaponType("Heavy Crossbow");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d10";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Javelin extends WeaponTemplate{
   public Javelin() {
-    weaponName = "Javelin";
+    setWeaponType("Javelin");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d6";

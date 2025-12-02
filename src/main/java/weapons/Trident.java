@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Trident extends WeaponTemplate{
   public Trident() {
-    weaponName = "Trident";
+    setWeaponType("Trident");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d8";

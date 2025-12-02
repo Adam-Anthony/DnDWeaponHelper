@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Club extends WeaponTemplate{
   public Club() {
-    weaponName = "Club";
+    setWeaponType("Club");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d4";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Handaxe extends WeaponTemplate{
   public Handaxe() {
-    weaponName = "Handaxe";
+    setWeaponType("Handaxe");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d6";

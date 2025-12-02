@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Maul extends WeaponTemplate{
   public Maul() {
-    weaponName = "Maul";
+    setWeaponType("Maul");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "2d6";

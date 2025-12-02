@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Rapier extends WeaponTemplate{
   public Rapier() {
-    weaponName = "Rapier";
+    setWeaponType("Rapier");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d8";

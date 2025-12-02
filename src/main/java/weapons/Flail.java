@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Flail extends WeaponTemplate{
   public Flail() {
-    weaponName = "Flail";
+    setWeaponType("Flail");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d8";

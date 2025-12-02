@@ -1,11 +1,11 @@
 package org.adamanthony
-import weapons.*
+import weaponforger.*;
 
 static void main(String[] args) {
   boolean random = true
   boolean martial = true
   boolean simple = true
-  Weapon weaponCrafter = new Weapon()
+  WeaponForge weaponCrafter = new WeaponForge()
   println "Hello world!"
 
   if (random) {
@@ -15,26 +15,26 @@ static void main(String[] args) {
       def w1 = weaponCrafter.getRandomMartialMeleeWeapon()
       if (checkElementChance()) addRandomElement(w1)
       println w1
-      println "** Random Ranged **"
+      println "\n** Random Ranged **"
       def w2 = weaponCrafter.getRandomMartialRangedWeapon()
       if (checkElementChance()) addRandomElement(w2)
       println w2
-      println "*** True Random ***"
+      println "\n*** True Random ***"
       def w3 = weaponCrafter.getRandomMartialWeapon()
       if (checkElementChance()) addRandomElement(w3)
       println w3
     }
     if (simple) {
-      println "Random Simple Weapon Rolls"
+      println "\nRandom Simple Weapon Rolls"
       println "* Random Melee *"
       def w1 = weaponCrafter.getRandomSimpleMeleeWeapon()
       if (checkElementChance()) addRandomElement(w1)
       println w1
-      println "** Random Ranged **"
+      println "\n** Random Ranged **"
       def w2 = weaponCrafter.getRandomSimpleRangedWeapon()
       if (checkElementChance()) addRandomElement(w2)
       println w2
-      println "*** True Random ***"
+      println "\n*** True Random ***"
       def w3 = weaponCrafter.getRandomSimpleWeapon()
       if (checkElementChance()) addRandomElement(w3)
       println w3
@@ -44,9 +44,9 @@ static void main(String[] args) {
 
       for (int i = 0; i < 24; i++) {
         System.out.println("i = " + i)
-        def abc = weaponCrafter.getSpecificMartialWeaponById(i)
-        if (abc != null)
-          println abc
+        def wep = weaponCrafter.getSpecificMartialWeaponById(i)
+        if (wep != null)
+          println wep
         else
           System.out.println("Undefined!")
       }
@@ -54,9 +54,9 @@ static void main(String[] args) {
     if (simple){
       for (int i = 0; i < 14; i++) {
         System.out.println("i = " + i)
-        def abc = weaponCrafter.getSpecificSimpleWeaponById(i)
-        if (abc != null)
-          println abc
+        def wep = weaponCrafter.getSpecificSimpleWeaponById(i)
+        if (wep != null)
+          println wep
         else
           System.out.println("Undefined!")
       }
@@ -76,6 +76,6 @@ static void addElement(int id, def weapon) {
     case 2: weapon.setChromaticType(DamageTypes.Fire); weapon.setColour("Red"); break
     case 3: weapon.setChromaticType(DamageTypes.Lightning); weapon.setColour("Blue"); break
     case 4: weapon.setChromaticType(DamageTypes.Poison); weapon.setColour("Green"); break
-    case 5: weapon.setChromaticType(DamageTypes.Necrotic); weapon.setColour("???"); break
+    case 5: weapon.setChromaticType(DamageTypes.Necrotic); weapon.setColour("Purple"); break
   }
 }

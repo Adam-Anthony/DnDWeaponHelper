@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Greatclub extends WeaponTemplate{
   public Greatclub() {
-    weaponName = "Greatclub";
+    setWeaponType("Greatclub");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d8";

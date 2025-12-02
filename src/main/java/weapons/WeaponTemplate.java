@@ -1,9 +1,14 @@
 package weapons;
 
+import weaponforger.DamageTypes;
+import weaponforger.WeaponCategory;
+import weaponforger.WeaponRating;
+
 import java.util.Arrays;
 
 abstract class WeaponTemplate {
   protected String weaponName = null;
+  protected String weaponType = null;
   protected WeaponCategory weaponCategory = null;
   protected DamageTypes damageType = null;
   protected DamageTypes secondaryDamageType = DamageTypes.NONE;
@@ -14,8 +19,11 @@ abstract class WeaponTemplate {
   protected WeaponRating weaponRating = null;
   protected DamageTypes chromaticType = null;
   protected String colour = null;
+  protected String origin = null;
 
 
+  public String getWeaponType() {return weaponType;}
+  public void setWeaponType(String weaponType) {this.weaponType = weaponType; updateName();}
   public String getWeaponName() { return weaponName;}
   public WeaponCategory getWeaponCategory() { return weaponCategory;}
   public String getDamageDice() { return damageDice; }
@@ -28,13 +36,18 @@ abstract class WeaponTemplate {
   public DamageTypes getSecondaryDamageType() { return secondaryDamageType;}
 
   public void setChromaticType(DamageTypes chromaticType) { this.chromaticType = chromaticType; }
-  public void setColour(String colour) { this.colour = colour; }
+  public void setColour(String colour) { this.colour = colour; updateName(); }
   public DamageTypes getChromaticType() { return chromaticType; }
-  public String getColour() { return colour; }
+  public String getColour() { return colour;
+  }
+
+  private void updateName() {
+    weaponName = (colour!=null ? colour+" " : "") + weaponType + (origin!=null ? " of origin" : "");
+  }
 
   @Override
   public String toString() {
-    String returnString = "[" + (colour!=null ? colour+" " : "")  + weaponName + "] | Damage: " + damageDice;
+    String returnString = "[" + weaponName + "] | Damage: " + damageDice;
     if (versatileDamageDice != null)
       returnString += " (" + versatileDamageDice + ")";
     returnString += " ["+ damageType+"]";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Warhammer extends WeaponTemplate{
   public Warhammer() {
-    weaponName = "Warhammer";
+    setWeaponType("Warhammer");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d8";

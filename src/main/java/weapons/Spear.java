@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Spear extends WeaponTemplate{
   public Spear() {
-    weaponName = "Spear";
+    setWeaponType("Spear");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Piercing;
     damageDice = "1d6";

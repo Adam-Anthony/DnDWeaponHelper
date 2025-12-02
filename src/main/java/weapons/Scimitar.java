@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Scimitar extends WeaponTemplate{
   public Scimitar() {
-    weaponName = "Scimitar";
+    setWeaponType("Scimitar");
     weaponCategory = WeaponCategory.Melee;
     damageType = DamageTypes.Slashing;
     damageDice = "1d6";

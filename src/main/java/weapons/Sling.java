@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Sling extends WeaponTemplate{
   public Sling() {
-    weaponName = "Sling";
+    setWeaponType("Sling");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Bludgeoning;
     damageDice = "1d4";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Longbow extends WeaponTemplate{
   public Longbow() {
-    weaponName = "Longbow";
+    setWeaponType("Longbow");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d8";

@@ -1,8 +1,9 @@
 package weapons;
+import weaponforger.*;
 
 public class Shortbow extends WeaponTemplate{
   public Shortbow() {
-    weaponName = "Shortbow";
+    setWeaponType("Shortbow");
     weaponCategory = WeaponCategory.Ranged;
     damageType = DamageTypes.Piercing;
     damageDice = "1d6";
